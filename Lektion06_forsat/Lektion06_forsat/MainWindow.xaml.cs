@@ -33,6 +33,7 @@ namespace Lektion06_forsat
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string content = (sender as Button).Content.ToString();
+
             switch (content)
             {
                 case "Vest":
