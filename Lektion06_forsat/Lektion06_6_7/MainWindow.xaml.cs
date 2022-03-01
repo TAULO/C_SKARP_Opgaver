@@ -27,7 +27,7 @@ namespace Lektion06_6_7
 
         private void ShowNameOfMenu(object sender, RoutedEventArgs e)
         {
-            var currHeader = e.Source as MenuItem;
+            var currHeader = (MenuItem) e.Source;
             if (currHeader != null) 
                 statusBar.Text = currHeader.Header.ToString();
         }
