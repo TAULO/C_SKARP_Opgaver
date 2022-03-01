@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Taulo\\.nuget\\packages\\": {}
+    "C:\\Users\\Thomas Taulo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_6_7\\Lektion06_6_7.csproj",
+      "projectUniqueName": "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_6_7\\Lektion06_6_7.csproj",
       "projectName": "Lektion06_6_7",
-      "projectPath": "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_6_7\\Lektion06_6_7.csproj",
-      "packagesPath": "C:\\Users\\Taulo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_6_7\\obj\\",
+      "projectPath": "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_6_7\\Lektion06_6_7.csproj",
+      "packagesPath": "C:\\Users\\Thomas Taulo\\.nuget\\packages\\",
+      "outputPath": "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_6_7\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Taulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thomas Taulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

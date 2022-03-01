@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj": {}
+    "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj": {
+    "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj",
+        "projectUniqueName": "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj",
         "projectName": "Lektion06_forsat",
-        "projectPath": "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj",
-        "packagesPath": "C:\\Users\\Taulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Taulo\\source\\repos\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\obj\\",
+        "projectPath": "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\Lektion06_forsat.csproj",
+        "packagesPath": "C:\\Users\\Thomas Taulo\\.nuget\\packages\\",
+        "outputPath": "E:\\C_SKARP_Opgaver\\Lektion06_forsat\\Lektion06_forsat\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Taulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Thomas Taulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
