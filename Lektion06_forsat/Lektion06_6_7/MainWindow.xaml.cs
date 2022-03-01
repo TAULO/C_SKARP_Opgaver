@@ -30,6 +30,7 @@ namespace Lektion06_6_7
             var currHeader = e.Source as MenuItem;
             if (currHeader != null) 
                 statusBar.Text = currHeader.Header.ToString();
+            Console.WriteLine(currHeader.Header.ToString());
         }
     }
 }
