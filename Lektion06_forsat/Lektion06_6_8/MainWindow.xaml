@@ -1,24 +1,40 @@
-﻿<Window x:Class="Lektion06_6_8.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lektion06_6_8"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="Lektion06_6_8.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <RadioButton></RadioButton>
-            <RadioButton></RadioButton>
-            <RadioButton></RadioButton>
-            <RadioButton></RadioButton>
-        </StackPanel>
-        <DockPanel>
-            <CheckBox></CheckBox>
-            <CheckBox></CheckBox>
-            <CheckBox></CheckBox>
-            <CheckBox></CheckBox>
-        </DockPanel>
+        <StackPanel Orientation="Horizontal" >
 
+            <StackPanel x:Name="stackPanelRadio">
+                <StatusBar>
+                    <Label>Status Radiobuttons</Label>
+                </StatusBar>
+            </StackPanel>
+            
+            <StackPanel x:Name="stackPanelCheckboxes">
+                <StatusBar>
+                    <Label>Status Checkboxes</Label>
+                </StatusBar>
+            </StackPanel>
+          
+            <StackPanel Orientation="Vertical">
+                <RadioButton Content="North" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked"/>
+                <RadioButton Content="South" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked"/>
+                <RadioButton Content="East" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked"/>
+                <RadioButton Content="West" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked"/>
+            </StackPanel>
+
+            <StackPanel x:Name="stackPanel" Orientation="Vertical">
+                <CheckBox Content="Lemon" Checked="CheckBox_Checked_Lemon" Unchecked="CheckBox_Unchecked_Lemon" />
+                <CheckBox Content="Orange" Checked="CheckBox_Checked_Orange" Unchecked="CheckBox_Unchecked_Orange"/>
+                <CheckBox Content="Banana" Checked="CheckBox_Checked_Banana" Unchecked="CheckBox_Unchecked_Banana"/>
+                <CheckBox Content="Apple" Checked="CheckBox_Checked_Apple" Unchecked="CheckBox_Unchecked_Apple"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
