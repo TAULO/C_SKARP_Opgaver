@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Øvelse 5.1\" />
+    <None Remove="Øvelse 5.2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Øvelse 5.1\" />
+    <Folder Include="Øvelse 5.2\" />
+  </ItemGroup>
+</Project>
