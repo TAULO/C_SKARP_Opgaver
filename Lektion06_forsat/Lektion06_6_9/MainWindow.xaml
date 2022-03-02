@@ -1,0 +1,36 @@
+﻿<Window x:Class="Lektion06_6_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lektion06_6_9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.7*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="1.7*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="textBoxLeft" Grid.Row="0" Grid.Column="0" Height="25" Width="250" Margin="30,41,29,65"></TextBox>
+        <TextBox x:Name="textBoxRigth" Grid.Row="0" Grid.Column="2" Height="25" Width="250" Margin="29,41,30,65"></TextBox>
+        <Button Grid.Row="0" Grid.Column="0" Margin="30,79,237,28" Click="AddItems_Left">Add</Button>
+        <Button Grid.Row="0" Grid.Column="3" Margin="30,79,237,28" Click="AddItems_Right">Add</Button>
+
+
+        <ListBox x:Name="listBoxLeft" Width="270" Height="170" Grid.Row="1" Grid.Column="0" Margin="20,16,19,16"></ListBox>
+        <ListBox x:Name="listBoxRigth" Width="270" Height="170" Grid.Row="1" Grid.Column="2" Margin="19,16,20,16"></ListBox>
+        <Button Grid.Column="1" Margin="63,16,63,162" Grid.Row="1" RenderTransformOrigin="0.514,1.244" Click="SwapItems_Right">==></Button>
+        <Button Grid.Column="1" Margin="63,45,63,133" Grid.Row="1" RenderTransformOrigin="0.514,1.244" Click="SwapItems_Left" Content="&lt;=="/>
+
+        <Button Grid.Column="0" Margin="20,38,246,38" Grid.Row="2" Click="Clear_Left">Clear</Button>
+        <Button Grid.Column="2" Margin="19,46,247,31" Grid.Row="2" Click="Clear_Right">Clear</Button>
+
+    </Grid>
+</Window>
