@@ -1,0 +1,26 @@
+﻿<Window x:Class="Lektion07.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lektion07"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="mainGrid">
+        <Label Content="Name" HorizontalAlignment="Left" Margin="177,141,0,0" VerticalAlignment="Top"/>
+        <Label Content="Weigth" HorizontalAlignment="Left" Margin="177,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="Age" HorizontalAlignment="Left" Margin="182,199,0,0" VerticalAlignment="Top"/>
+        <Label Content="Score" HorizontalAlignment="Left" Margin="181,226,0,0" VerticalAlignment="Top"/>
+        <Label Content="Accepted" HorizontalAlignment="Left" Margin="177,252,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="230,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=Name}"/>
+        <TextBox x:Name="textBoxWeigth" HorizontalAlignment="Left" Margin="230,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=Weigth}"/>
+        <TextBox x:Name="textBoxAge" HorizontalAlignment="Left" Margin="230,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Path=Age}"/>
+        <TextBox x:Name="textBoxScore" HorizontalAlignment="Left" Margin="230,230,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Text="{Binding Path=Score}"/>
+        <CheckBox x:Name="checkBoxAccepted" HorizontalAlignment="Left" Margin="242,257,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=Accepted}"/>
+
+        <Button Margin="230,299,429,102" Click="Button_Click">Change Person!</Button>
+        <Button Margin="230,358,429,40" Click="Button_Click_1">Print current Person!</Button>
+
+    </Grid>
+</Window>
