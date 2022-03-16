@@ -8,19 +8,20 @@ namespace Lektion08
 {
     internal class Car
     {
-        private string brand { get; set; }
-        private int horsepower { get; set; }
+        public int CarID { get; set; }
+        public string Brand { get; set; }
+        public int Horsepower { get; set; }
 
         public Car() { }
         public Car(string brand, int horsepower)
         {
-            this.brand = brand;
-            this.horsepower = horsepower;
+            this.Brand = brand;
+            this.Horsepower = horsepower;
         }
 
         public override string ToString()
         {
-            return "Brand: " + this.brand + ". Horsepowers: " + this.horsepower;
+            return "Brand: " + this.Brand + ". Horsepowers: " + this.Horsepower;
         }
     }
 }

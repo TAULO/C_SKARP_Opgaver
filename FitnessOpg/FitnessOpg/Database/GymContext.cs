@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessOpg.Model;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -6,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lektion08.Database
+namespace FitnessOpg.Database
 {
-    internal class DatabaseContext : DbContext
+    internal class GymContext : DbContext
     {
-        public DatabaseContext() : base("Cars")
+        public GymContext() : base("FitnesscenterDB")
         {
+           
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+        public DbSet<Fitnesscenter> FitnesscenterSet { get; set; }
+        public DbSet<Member> MemberSet { get; set; }
+        public DbSet<TraningMachine> TraningMachineSet { get; set; }
 
-        public DbSet<Car> Cars { get; set; }
     }
 }

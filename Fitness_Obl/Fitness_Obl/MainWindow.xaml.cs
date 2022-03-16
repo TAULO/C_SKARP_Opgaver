@@ -1,7 +1,6 @@
-﻿using Lektion08.Database;
+﻿using Fitness_Obl.Database;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -16,26 +15,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Lektion08
+namespace Fitness_Obl
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        DatabaseContext context = new DatabaseContext();
+        GymContext context = new GymContext();
         public MainWindow()
         {
             InitializeComponent();
+            foreach(var items in context.FitnesscenterSet)
+            {
+                Debug.WriteLine(items);
+            }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            foreach(Car c in context.Cars)
-            {
-                Debug.WriteLine("Something??");
-                MessageBox.Show(c.ToString());
-            }   
-        }
+
     }
 }

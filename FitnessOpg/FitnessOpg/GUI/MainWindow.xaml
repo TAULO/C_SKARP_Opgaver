@@ -1,0 +1,62 @@
+﻿<Window x:Class="FitnessOpg.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessOpg"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="540" Width="850">
+    <Grid ShowGridLines="True">
+        <Button Height="30" Width="100" Margin="555,372,145,32" Click="AddGymClick">Add Gym</Button>
+        <Button Height="30" Width="100" Margin="660,372,40,32" Click="AddMemberClick">Add Member</Button>
+
+        <ListBox x:Name="ListBoxGyms" HorizontalAlignment="Left" Height="374" Margin="67,53,0,0" VerticalAlignment="Top" Width="175" Background="LightSkyBlue" MouseDoubleClick="ListBoxGyms_MouseDoubleClick"/>
+        <ListBox x:Name="ListBoxMembers" HorizontalAlignment="Center" Height="374" Margin="0,53,0,0" VerticalAlignment="Top" Width="175" MouseDoubleClick="ListBoxMembers_MouseDoubleClick" SelectionChanged="ListBoxMembers_SelectionChanged" Background="LightSkyBlue"/>
+
+        <Label Content="Gyms" HorizontalAlignment="Left" Margin="133,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="Members" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="274,172,0,0" VerticalAlignment="Top"/>
+
+        <Label Margin="67,424,598,35">Search for names of gyms</Label>
+        <TextBox x:Name="SearchGymName" HorizontalAlignment="Left" Margin="95,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="SearchGymName_TextChanged"/>
+
+        <Label Margin="326,427,304,31">Search for names of members</Label>
+        <TextBox x:Name="SearchMemberName" HorizontalAlignment="Center" Margin="0,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="SearchMemberName_TextChanged"/>
+
+        <Button x:Name="refreshBtn" HorizontalAlignment="Left" Margin="274,400,0,0" VerticalAlignment="Top" Height="28" Width="30" Click="RefreshListBoxes_Click">
+            <Image Source="./Assets/refresh.png" Height="20" Width="20" RenderTransformOrigin="0.81,0.55"/>
+        </Button>
+
+        <Button x:Name="updateGymAsc" HorizontalAlignment="Left" Margin="31,76,0,0" VerticalAlignment="Top" Height="28" Width="30" RenderTransformOrigin="-0.458,0.359" Click="SortFitnessAsc_Click">
+            <Image Source="./Assets/up-chevron.png" Height="19" Width="21" RenderTransformOrigin="0.845,0.827">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180.841"/>
+                        <TranslateTransform X="0.079" Y="-10.514"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+        <Button x:Name="updateGymDesc" HorizontalAlignment="Left" Margin="31,109,0,0" VerticalAlignment="Top" Click="SortFitnessDesc_Click" Height="28" Width="30">
+            <Image Source="./Assets/up-chevron.png" Height="20" Width="20" RenderTransformOrigin="0.81,0.55"/>
+        </Button>
+
+        <Button x:Name="updateMemberAsc" HorizontalAlignment="Left" Margin="516,78,0,0" VerticalAlignment="Top" Height="28" Width="30" RenderTransformOrigin="-0.458,0.359" Click="SortMemberAsc_Click">
+            <Image Source="./Assets/up-chevron.png" Height="19" Width="21" RenderTransformOrigin="0.845,0.827">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180.841"/>
+                        <TranslateTransform X="0.079" Y="-10.514"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+        <Button x:Name="UpdateMemberDesc" HorizontalAlignment="Left" Margin="516,111,0,0" VerticalAlignment="Top" Click="SortMemberDesc_Click" Height="28" Width="30">
+            <Image Source="./Assets/up-chevron.png" Height="20" Width="20" RenderTransformOrigin="0.81,0.55"/>
+        </Button>
+    </Grid>
+</Window>
