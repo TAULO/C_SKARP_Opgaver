@@ -9,10 +9,9 @@ namespace FitnessOpg.Model
         public string MemberName { get; set; }
         public DateTime MemberBirth { get; set; }
         public string MemberMail { get; set; }
-        public ICollection<Fitnesscenter> FitnesscenterList { get; }
+        public virtual ICollection<Fitnesscenter> FitnesscenterList { get; } = new HashSet<Fitnesscenter>();
         public Member() 
         {
-            FitnesscenterList = new List<Fitnesscenter>();
         }
 
         public Member(string memberName, DateTime memberBirth, string memberMail)
@@ -20,7 +19,6 @@ namespace FitnessOpg.Model
             MemberName = memberName;
             MemberBirth = memberBirth;
             MemberMail = memberMail;
-            FitnesscenterList = new List<Fitnesscenter>();
         }
         public bool IsOver16()
         {

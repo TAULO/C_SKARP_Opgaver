@@ -43,12 +43,10 @@ namespace FitnessOpg.GUI
                 string name = TextBoxName.Text;
                 birth = TextBoxBirth.Text;
                 string mail = TextBoxMail.Text;
-                string age = TextBoxBirth.Text;
 
                 if (name != null && name.Length > 1 &&
-                    birth != null && birth.Length > 1 &&
-                    mail != null && mail.Length > 1 &&
-                    age != null && age.Length <= TextBoxBirth.MaxLength)
+                    birth != null && birth.Length <= TextBoxBirth.MaxLength &&
+                    mail != null && mail.Length > 1)
                 {
                     if (MessageBox.Show("Are you sure you want to add: " + name + "?", "Add new Member", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {

@@ -51,7 +51,8 @@ namespace FitnessOpg.GUI
                     if (MessageBox.Show("Are you sure you want to update " + name + "?", "Update Gym", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         Create c = new Create();
-                        c.Updatefitnesscenter(f, name, double.Parse(price), ParseOpenHours(), ParseClosingHours());
+                        var fitnessFound = context.FitnesscenterSet.SingleOrDefault(gym => gym.ID == f.ID);
+                        c.Updatefitnesscenter(fitnessFound, name, double.Parse(price), ParseOpenHours(), ParseClosingHours());
                         context.SaveChanges();
                         Clear();
                         this.Close();

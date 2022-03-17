@@ -10,7 +10,7 @@
         <Button Height="30" Width="100" Margin="555,372,145,32" Click="AddGymClick">Add Gym</Button>
         <Button Height="30" Width="100" Margin="660,372,40,32" Click="AddMemberClick">Add Member</Button>
 
-        <ListBox x:Name="ListBoxGyms" HorizontalAlignment="Left" Height="374" Margin="67,53,0,0" VerticalAlignment="Top" Width="175" Background="LightSkyBlue" MouseDoubleClick="ListBoxGyms_MouseDoubleClick"/>
+        <ListBox x:Name="ListBoxGyms" HorizontalAlignment="Left" Height="374" Margin="67,53,0,0" VerticalAlignment="Top" Width="175" Background="LightSkyBlue" MouseDoubleClick="ListBoxGyms_MouseDoubleClick" SelectionChanged="ListBoxGyms_SelectionChanged"/>
         <ListBox x:Name="ListBoxMembers" HorizontalAlignment="Center" Height="374" Margin="0,53,0,0" VerticalAlignment="Top" Width="175" MouseDoubleClick="ListBoxMembers_MouseDoubleClick" SelectionChanged="ListBoxMembers_SelectionChanged" Background="LightSkyBlue"/>
 
         <Label Content="Gyms" HorizontalAlignment="Left" Margin="133,27,0,0" VerticalAlignment="Top"/>

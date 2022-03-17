@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="Add a Member to a Gym" Height="500" Width="400">
     <Grid>
-        <StackPanel x:Name="stackPanel">
-            <Button Click="Button_Click">OK</Button>
+        <StackPanel x:Name="stackPanel" Margin="0,74,292,74">
         </StackPanel>
+
+        <ListBox x:Name="listBox" Margin="123,74,34,74"></ListBox>
+        <Button HorizontalAlignment="Left" Margin="208,415,0,0" VerticalAlignment="Top" Width="72" Height="22" Click="Button_Click">OK</Button>
     </Grid>
 </Window>
