@@ -16,10 +16,10 @@
         <Label Content="Gyms" HorizontalAlignment="Left" Margin="133,27,0,0" VerticalAlignment="Top"/>
         <Label Content="Members" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top"/>
 
-        <Label Margin="67,424,598,35">Search for names of gyms</Label>
+        <Label Margin="67,425,598,34">Search for gyms by name</Label>
         <TextBox x:Name="SearchGymName" HorizontalAlignment="Left" Margin="95,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="SearchGymName_TextChanged"/>
 
-        <Label Margin="326,427,304,31">Search for names of members</Label>
+        <Label Margin="326,427,304,31">Search for members by name</Label>
         <TextBox x:Name="SearchMemberName" HorizontalAlignment="Center" Margin="0,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="SearchMemberName_TextChanged"/>
 
         <Button x:Name="refreshBtn" HorizontalAlignment="Left" Margin="273,95,0,0" VerticalAlignment="Top" Height="28" Width="30" Click="RefreshListBoxes_Click">

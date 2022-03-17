@@ -1,4 +1,5 @@
-﻿using FitnessOpg.Database;
+﻿using FitnessOpg.Controller;
+using FitnessOpg.Database;
 using FitnessOpg.Model;
 using System;
 using System.Collections.Generic;
@@ -55,9 +56,8 @@ namespace FitnessOpg.GUI
                         var memberFound = context.MemberSet.SingleOrDefault(m => m.MemberID == updateMember.MemberID);
                         if (memberFound != null)
                         {
-                            memberFound.MemberName = name;
-                            memberFound.MemberMail = mail;
-                            memberFound.MemberBirth = ParseBirth();
+                            Create c = new Create();
+                            c.UpdateMember(memberFound, name, ParseBirth(), mail);
                             context.SaveChanges();
                         }
                         Clear();

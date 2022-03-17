@@ -29,5 +29,35 @@ namespace FitnessOpg.Controller
             center.OpeningTime = openingTime;
             center.ClosingTime = closingTime;
         }
+
+        public Member CreateMember(string name, DateTime birth, string mail)
+        {
+            if (name == null) throw new ArgumentException("Name can not be null");
+            if (name.Length <= 0) throw new ArgumentException("Name can not be empty");
+            if (mail == null) throw new ArgumentException("Name can not be null");
+            if (mail.Length <= 0) throw new ArgumentException("Name can not be empty");
+            if(birth == null) throw new ArgumentNullException("Date can not be null");
+
+            Member member = new Member(name, birth, mail);
+
+            if (!member.IsOver16()) throw new ArgumentException("Member must be older than 16");
+
+            return member;
+        }
+
+        public void UpdateMember(Member m, string name, DateTime birth, string mail)
+        {
+            if (name == null) throw new ArgumentException("Name can not be null");
+            if (name.Length <= 0) throw new ArgumentException("Name can not be empty");
+            if (mail == null) throw new ArgumentException("Name can not be null");
+            if (mail.Length <= 0) throw new ArgumentException("Name can not be empty");
+            if (birth == null) throw new ArgumentNullException("Date can not be null");
+
+            m.MemberName = name;
+            m.MemberBirth = birth;
+            m.MemberMail = mail;
+
+            if (!m.IsOver16()) throw new ArgumentException("Member must be older than 16");
+        }
     }
 }

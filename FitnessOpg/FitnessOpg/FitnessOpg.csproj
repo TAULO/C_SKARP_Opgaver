@@ -125,10 +125,13 @@
     <Compile Include="Migrations\202203102026580_init.designer.cs">
       <DependentUpon>202203102026580_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203171225582_update.cs" />
+    <Compile Include="Migrations\202203171225582_update.designer.cs">
+      <DependentUpon>202203171225582_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Fitnesscenter.cs" />
     <Compile Include="Model\Member.cs" />
-    <Compile Include="Model\TrainingMachine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -148,10 +151,14 @@
     <EmbeddedResource Include="Migrations\202203102026580_init.resx">
       <DependentUpon>202203102026580_init.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203171225582_update.resx">
+      <DependentUpon>202203171225582_update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="FitnessDiagram.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

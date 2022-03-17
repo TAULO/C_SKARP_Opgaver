@@ -1,4 +1,5 @@
-﻿using FitnessOpg.Database;
+﻿using FitnessOpg.Controller;
+using FitnessOpg.Database;
 using FitnessOpg.Model;
 using System;
 using System.Collections.Generic;
@@ -50,7 +51,8 @@ namespace FitnessOpg.GUI
                 {
                     if (MessageBox.Show("Are you sure you want to add: " + name + "?", "Add new Member", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
-                        newMember = new Member(name, ParseBirth(), mail);
+                        Create c = new Create();
+                        newMember = c.CreateMember(name, ParseBirth(), mail);
                         context.MemberSet.Add(newMember);
                         context.SaveChanges();
                         MessageBox.Show(newMember.MemberName + " has been added!", "Success", MessageBoxButton.OK);

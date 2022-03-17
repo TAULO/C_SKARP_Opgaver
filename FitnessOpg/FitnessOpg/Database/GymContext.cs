@@ -21,7 +21,5 @@ namespace FitnessOpg.Database
         }
         public DbSet<Fitnesscenter> FitnesscenterSet { get; set; }
         public DbSet<Member> MemberSet { get; set; }
-        public DbSet<TraningMachine> TraningMachineSet { get; set; }
-
     }
 }

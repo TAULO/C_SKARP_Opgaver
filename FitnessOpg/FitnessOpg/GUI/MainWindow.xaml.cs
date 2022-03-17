@@ -3,6 +3,7 @@ using FitnessOpg.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-// Det skal helts hedde view i stedet for gui, men det fandt jeg ud af ret sent
 namespace FitnessOpg.GUI
 {
     /// <summary>
@@ -26,12 +26,24 @@ namespace FitnessOpg.GUI
     {
         GymContext context = new GymContext();
         public static MainWindow Instance { get; private set; }
-        public ObservableCollection<Fitnesscenter> Fitnesscenters { get; private set; }
         public MainWindow()
         {
             InitializeComponent();
             Instance = this;
             UpdateListBoxes();
+        }   
+        private void UpdateListBoxes()
+        {
+            ListBoxGyms.Items.Clear();
+            foreach (var item in context.FitnesscenterSet)
+            {
+                ListBoxGyms.Items.Add(item);
+            }
+            ListBoxMembers.Items.Clear();
+            foreach (var item in context.MemberSet)
+            {
+                ListBoxMembers.Items.Add(item);
+            }
         }
 
         // -------------------------------------------------------- windows -------------------------------------------------------
@@ -61,19 +73,6 @@ namespace FitnessOpg.GUI
         private void RefreshListBoxes_Click(object sender, RoutedEventArgs e)
         {
             UpdateListBoxes();
-        }
-        private void UpdateListBoxes()
-        {
-            ListBoxGyms.Items.Clear();
-            foreach (var item in context.FitnesscenterSet)
-            {
-                ListBoxGyms.Items.Add(item);
-            }
-            ListBoxMembers.Items.Clear();
-            foreach (var item in context.MemberSet)
-            {
-                ListBoxMembers.Items.Add(item);
-            }
         }
 
         // -------------------------------------------------------- data filters -------------------------------------------------------

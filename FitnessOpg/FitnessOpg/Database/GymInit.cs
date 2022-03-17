@@ -13,7 +13,7 @@ namespace FitnessOpg.Database
     {
         protected override void Seed(GymContext context)
         {
-            // hvert medlem kan være en del af 1 - * fitnesscenter
+            // hvert medlem kan være en del af mange fitnesscenter
             // hvert fitnesscenter kan have mange medlemmer
             Fitnesscenter fSkjern = new Fitnesscenter("Fitness Skjern", 150, new DateTime(2200, 1, 1, 5, 0, 0), new DateTime(2200, 1, 1, 22, 0, 0));
             Fitnesscenter fAarhus = new Fitnesscenter("Fitness Aarhus", 200, new DateTime(2200, 1, 1, 5, 0, 0), new DateTime(2200, 1, 1, 23, 0, 0));
