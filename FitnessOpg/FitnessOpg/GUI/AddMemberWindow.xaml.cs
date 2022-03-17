@@ -108,25 +108,6 @@ namespace FitnessOpg.GUI
             CheckboxOver16.IsEnabled = false;
             CheckboxOver16.IsChecked = false;
         }
-
-        private void TextBoxBirth_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            birth = TextBoxBirth.Text;
-            Console.WriteLine(birth.Length);
-            if (birth.Length == 2)
-            {
-                birth += "/";
-            }
-            if (birth.Length == 4)
-            {
-                birth += "/";
-            }
-            if (birth.Length >= 7)
-            {
-
-            }
-            Console.WriteLine(birth);
-        }
         // tillader kun numerisk værdier
         private void TextBoxBirth_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {

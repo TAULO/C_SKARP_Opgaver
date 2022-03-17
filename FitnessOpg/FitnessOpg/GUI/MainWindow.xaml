@@ -10,12 +10,11 @@
         <Button Height="30" Width="100" Margin="555,372,145,32" Click="AddGymClick">Add Gym</Button>
         <Button Height="30" Width="100" Margin="660,372,40,32" Click="AddMemberClick">Add Member</Button>
 
-        <ListBox x:Name="ListBoxGyms" HorizontalAlignment="Left" Height="374" Margin="67,53,0,0" VerticalAlignment="Top" Width="175" Background="LightSkyBlue" MouseDoubleClick="ListBoxGyms_MouseDoubleClick" SelectionChanged="ListBoxGyms_SelectionChanged"/>
-        <ListBox x:Name="ListBoxMembers" HorizontalAlignment="Center" Height="374" Margin="0,53,0,0" VerticalAlignment="Top" Width="175" MouseDoubleClick="ListBoxMembers_MouseDoubleClick" SelectionChanged="ListBoxMembers_SelectionChanged" Background="LightSkyBlue"/>
+        <ListBox x:Name="ListBoxGyms" HorizontalAlignment="Left" Height="374" Margin="67,53,0,0" VerticalAlignment="Top" Width="175" MouseDoubleClick="ListBoxGyms_MouseDoubleClick" SelectionChanged="ListBoxGyms_SelectionChanged"/>
+        <ListBox x:Name="ListBoxMembers" HorizontalAlignment="Center" Height="374" Margin="0,53,0,0" VerticalAlignment="Top" Width="175" MouseDoubleClick="ListBoxMembers_MouseDoubleClick" SelectionChanged="ListBoxMembers_SelectionChanged"/>
 
         <Label Content="Gyms" HorizontalAlignment="Left" Margin="133,27,0,0" VerticalAlignment="Top"/>
         <Label Content="Members" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="274,172,0,0" VerticalAlignment="Top"/>
 
         <Label Margin="67,424,598,35">Search for names of gyms</Label>
         <TextBox x:Name="SearchGymName" HorizontalAlignment="Left" Margin="95,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="SearchGymName_TextChanged"/>
@@ -23,7 +22,7 @@
         <Label Margin="326,427,304,31">Search for names of members</Label>
         <TextBox x:Name="SearchMemberName" HorizontalAlignment="Center" Margin="0,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="SearchMemberName_TextChanged"/>
 
-        <Button x:Name="refreshBtn" HorizontalAlignment="Left" Margin="274,400,0,0" VerticalAlignment="Top" Height="28" Width="30" Click="RefreshListBoxes_Click">
+        <Button x:Name="refreshBtn" HorizontalAlignment="Left" Margin="273,95,0,0" VerticalAlignment="Top" Height="28" Width="30" Click="RefreshListBoxes_Click">
             <Image Source="./Assets/refresh.png" Height="20" Width="20" RenderTransformOrigin="0.81,0.55"/>
         </Button>
 

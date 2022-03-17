@@ -26,7 +26,7 @@
         <Label Grid.Row="1"  Margin="75,83,0,10" RenderTransformOrigin="-1.318,0.492">Birth</Label>
         <Label Grid.Column="1" Margin="3,52,177,38" Grid.Row="1">DD/MM/YYYY</Label>
         <TextBox Grid.Row="1" x:Name="TextBoxBirth" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="{Binding Path=MemberBirth, StringFormat=d}"
-         Margin="0,83,135,4" Grid.Column="1" TextChanged="TextBoxBirth_TextChanged" PreviewTextInput="TextBoxBirth_PreviewTextInput" MaxLength="10"/>
+         Margin="0,83,135,4" Grid.Column="1" PreviewTextInput="TextBoxBirth_PreviewTextInput" MaxLength="10"/>
         <Button Grid.Row="1" Grid.Column="1" Margin="139,87,72,7" Click="BirthControlClick">Check</Button>
 
         <Label Grid.Row="2" Margin="75,83,0,10">E-mail</Label>

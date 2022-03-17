@@ -7,17 +7,24 @@
         <ResourceDictionary>
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="Verdana"></Setter>
+                <Setter Property="Foreground" Value="LightCyan"></Setter>
             </Style>
             <Style TargetType="Button">
                 <Setter Property="Background" Value="LightSkyBlue"></Setter>
                 <Setter Property="FontFamily" Value="Verdana"></Setter>
+                <Setter Property="Foreground" Value="LightCyan"></Setter>
             </Style>
             <Style TargetType="ListBox">
                 <Setter Property="FontFamily" Value="Verdana"></Setter>
+                <Setter Property="Background" Value="LightSkyBlue"></Setter>
+                <Setter Property="Foreground" Value="LightCyan"></Setter>
             </Style>
             <Style TargetType="Grid">
-                <Setter Property="Background" Value="#72a9cf"></Setter>
+                <Setter Property="Background" Value="CornflowerBlue"></Setter>
             </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Background" Value="#CDEDFA"></Setter>
+            </Style> 
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -2,6 +2,7 @@
 using FitnessOpg.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -25,11 +26,12 @@ namespace FitnessOpg.GUI
     {
         GymContext context = new GymContext();
         public static MainWindow Instance { get; private set; }
+        public ObservableCollection<Fitnesscenter> Fitnesscenters { get; private set; }
         public MainWindow()
         {
             InitializeComponent();
             Instance = this;
-            UpdateListBoxes();  
+            UpdateListBoxes();
         }
 
         // -------------------------------------------------------- windows -------------------------------------------------------
@@ -59,6 +61,19 @@ namespace FitnessOpg.GUI
         private void RefreshListBoxes_Click(object sender, RoutedEventArgs e)
         {
             UpdateListBoxes();
+        }
+        private void UpdateListBoxes()
+        {
+            ListBoxGyms.Items.Clear();
+            foreach (var item in context.FitnesscenterSet)
+            {
+                ListBoxGyms.Items.Add(item);
+            }
+            ListBoxMembers.Items.Clear();
+            foreach (var item in context.MemberSet)
+            {
+                ListBoxMembers.Items.Add(item);
+            }
         }
 
         // -------------------------------------------------------- data filters -------------------------------------------------------
@@ -98,19 +113,6 @@ namespace FitnessOpg.GUI
             var result = context.MemberSet.OrderByDescending(f => f.MemberName);
 
             foreach (var item in result)
-            {
-                ListBoxMembers.Items.Add(item);
-            }
-        }
-        private void UpdateListBoxes()
-        {
-            ListBoxGyms.Items.Clear();
-            foreach (var item in context.FitnesscenterSet)
-            {
-                ListBoxGyms.Items.Add(item);
-            }
-            ListBoxMembers.Items.Clear();
-            foreach (var item in context.MemberSet)
             {
                 ListBoxMembers.Items.Add(item);
             }
@@ -166,32 +168,40 @@ namespace FitnessOpg.GUI
             }
         }
 
-        // show each gym this member is member of
+        // show each gym this selected member is a member of
         private void ListBoxMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Member selectedMember = ListBoxMembers.SelectedItem as Member;
-            if (selectedMember != null)
+            if (selectedMember != null && selectedMember.FitnesscenterList.Count > 0)
             {
-                Console.WriteLine(selectedMember.FitnesscenterList.Count);
                 ListBoxGyms.Items.Clear();
                 foreach (var gym in selectedMember.FitnesscenterList)
                 {
                     ListBoxGyms.Items.Add(gym);
                 }
+            } 
+            else if (selectedMember != null && selectedMember.FitnesscenterList.Count <= 0)
+            {
+                ListBoxGyms.Items.Clear();
+                ListBoxGyms.Items.Add(new Label().Content = "No gyms found");
             }
         }
 
-        // show every member who are members of this gym
+        // show every member who are members of the selected gym
         private void ListBoxGyms_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Fitnesscenter selectedGym = ListBoxGyms.SelectedItem as Fitnesscenter;
-            if (selectedGym != null)
+            if (selectedGym != null && selectedGym.Members.Count > 0)
             {
                 ListBoxMembers.Items.Clear();
                 foreach(var member in selectedGym.Members)
                 {
                     ListBoxMembers.Items.Add(member);
                 }
+            } else if (selectedGym != null && selectedGym.Members.Count <= 0)
+            {
+                ListBoxMembers.Items.Clear();
+                ListBoxMembers.Items.Add(new Label().Content = "No members found");
             }
         }
     }

@@ -60,6 +60,8 @@ namespace FitnessOpg.GUI
             listBox.Items.Remove(currCheckbox.Content);
             int indeks = stackPanel.Children.IndexOf(currCheckbox);
             member.FitnesscenterList.Remove(gymArr[indeks]);
+            gymArr[indeks].Members.Remove(member);
+            context.SaveChanges();
         }
         
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -86,17 +88,19 @@ namespace FitnessOpg.GUI
             }
             if (currGym.Length > -1)
             {
+                string addedGyms = "";
                 foreach(var gym in currGym)
                 {
                     if (gym != null)
                     {
+                        addedGyms += gym.FitnessName + Environment.NewLine;
                         var fitnessFound = context.FitnesscenterSet.FirstOrDefault(f => f.ID == gym.ID);
                         member.FitnesscenterList.Add(fitnessFound);
                         fitnessFound.Members.Add(member);
                         context.SaveChanges();
                     }
                 }
-                //MessageBox.Show("You have added " + member.MemberName + " to:" + Environment.NewLine + currGym[indeks].FitnessName);
+                MessageBox.Show("You have added " + member.MemberName + " to:" + Environment.NewLine + addedGyms, "Added new member", MessageBoxButton.OK);
                 this.Close();
             }
         }
